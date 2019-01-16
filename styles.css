@@ -1,0 +1,61 @@
+.menu {
+  background-color: #ff6600;
+}
+html{
+  background-color: white;
+}
+
+body {
+  background-color: #f6f6ef;
+  border-bottom: 3px solid #ff6600;
+
+}
+
+center{
+  margin: 0;
+  padding: 0;
+}
+
+body a{
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#logo{
+  margin-top: 4px;
+}
+
+#menuBar img{
+  position: relative;
+  top: 4px;
+}
+
+#menuBar{
+  padding-left: 4px;
+  position: relative;
+  bottom: 4px;
+}
+
+#menuBar ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: block;
+
+}
+
+
+
+#menuBar li {
+  display: inline;
+  margin-top: 5px;
+}
+
+#login{
+  position: relative;
+  top: 4px;
+  float: right; /*why does it have no margin? */
+  margin: 5px 5px;
+}
