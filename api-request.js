@@ -1,25 +1,32 @@
-let url =  "https://newsapi.org/v2/top-headlines?sources=hacker-news&apiKey=1d81b476474d4f2087e7d125159a34f6";
+let url = "https://cors-anywhere.herokuapp.com/http://recipepuppy.com/api";
 
 fetch(url)
   .then(r => {
     return r.json();
   })
   .then(data => {
-    let results = data.articles; // get the array of results from the data object
-    let holdingList = document.createElement("ol"); // create a new `<li>`
+    let results = data.results; // get the array of results from the data object
+    let recipeList = document.createElement("ul"); // create a new `<li>`
     let body = document.querySelector("body"); // attach to the `<body>` node of the DOM
-    body.appendChild(holdingList); // append the list to the body
-    results.map(story => {
-      // loop through each story object in the array of stories
-
-      if (story.content == null){
-        story.content = "No description provided. Click Title for the story.";
-      }
-      let storyItem = document.createElement("li"); // create a story item `<li>`
-      storyItem.innerHTML = "<a href="+ story.url +">"+ story.title +"</a><br>"+ story.content;
-      holdingList.appendChild(storyItem); // append each story to the `<ul>`
+    body.appendChild(recipeList); // append the list to the body
+    results.map(recipe => {
+      // loop through each recipe object in the array of recipes
+      let recipeItem = document.createElement("li"); // create a recipe item `<li>`
+      recipeItem.innerHTML = '<a href='+ recipe.href + '><img src=' + recipe.thumbnail + '></a><br><a href="' + recipe.href + '">' + recipe.title + "</a><br><ol> <span id='ingredients'>Ingredients</span> <br> " + recipe.ingredients +"</ol><br><br>" ; // add the link to each li with each recipe's title as the text and link as the href
+      recipeList.appendChild(recipeItem); // append each recipe to the `<ul>`
     });
   })
   .catch(e => {
     console.log(`An error occurred: ${e}`);
   });
+
+
+"<br><a href=" + recipe.href + '>' + recipe.title + "</a><br><ol> " + recipe.ingredients +"</ol><br><br>"
+
+//'<a href='+ recipe.href + '><img src=' + recipe.thumbnail + '></a>'
+
+
+//<a href="https://news.ycombinator.com"><img id="logo"src="y18.gif" width="18" height="18" style="border: 1px white solid;" alt="hacker news logo"></a>
+
+
+//'<a href="' + recipe.href + '"><img src="' + recipe.thumbnail + '"> </a>'

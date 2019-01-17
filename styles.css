@@ -1,61 +1,40 @@
-.menu {
-  background-color: #ff6600;
-}
-html{
-  background-color: white;
-}
 
-body {
+
+body{
   background-color: #f6f6ef;
-  border-bottom: 3px solid #ff6600;
+}
+
+ul{
+    display: block;
+    list-style-type: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+span {
+  border-bottom: 1px solid black;
 
 }
 
-center{
-  margin: 0;
-  padding: 0;
+img {
+  float: left;
+  padding-right: 5px;
 }
 
-body a{
+ol{
+  list-style: decimal;
+  position: relative;
+  bottom: 18px;
+}
+
+a {
   color: black;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: bold;
   text-decoration: none;
-}
-
-#logo{
-  margin-top: 4px;
-}
-
-#menuBar img{
   position: relative;
-  top: 4px;
-}
-
-#menuBar{
-  padding-left: 4px;
-  position: relative;
-  bottom: 4px;
-}
-
-#menuBar ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 0px;
-    display: block;
-
-}
-
-
-
-#menuBar li {
-  display: inline;
-  margin-top: 5px;
-}
-
-#login{
-  position: relative;
-  top: 4px;
-  float: right; /*why does it have no margin? */
-  margin: 5px 5px;
+  bottom: 25px;
 }
